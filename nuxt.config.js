@@ -31,6 +31,7 @@ export default {
   ** Global CSS
   */
   css: [
+    { src: '~/assets/common.scss', lang: 'scss' },
   ],
   /*
   ** Plugins to load before mounting the App
@@ -67,7 +68,7 @@ export default {
       dark: false,
       themes: {
         dark: {
-          primary: colors.blue.darken2,
+          primary: '#F1D04B',
           accent: colors.grey.darken3,
           secondary: colors.amber.darken3,
           info: colors.teal.lighten1,
@@ -84,6 +85,9 @@ export default {
           error: colors.deepOrange.accent4,
           success: colors.green.accent3
         }
+      },
+      options: {
+        customProperties: true
       }
     }
   },

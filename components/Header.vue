@@ -16,7 +16,7 @@
         <v-col align="center" class="hidden-sm-and-down">
           <v-row no-gutters align="center" justify="end">
             <v-col v-for="(item, i) in items" :key="i" cols="auto">
-              <v-btn :to="`${item.to}`" class="text-capitalize" text nuxt>{{item.title}}</v-btn>
+              <v-btn :to="`${item.to}`" text nuxt>{{item.title}}</v-btn>
             </v-col>
           </v-row>
         </v-col>
@@ -35,19 +35,19 @@ export default {
       },
       items: [
         {
-          title: 'about',
+          title: 'About',
           to: '/about'
         },
         {
-          title: 'promotion',
+          title: 'Promotion',
           to: '/promotion'
         },
         {
-          title: 'shop',
+          title: 'Shop',
           to: '/product'
         },
         {
-          title: 'our store',
+          title: 'Our Store',
           to: '/store'
         },
       ]

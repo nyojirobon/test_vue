@@ -9,8 +9,8 @@
           <v-col align="center" class="hidden-sm-and-down">
             <v-row align="center" justify="start">
               <v-col cols="auto">
-                <div class="white--text text-h6 text-capitalize">
-                  want to know lassana better?
+                <div class="white--text text-h6">
+                  Want To Know Lassana Better?
                 </div>
               </v-col>
             </v-row>
@@ -23,8 +23,8 @@
             </v-row>
             <v-row align="center" justify="start">
               <v-col cols="auto">
-                <div class="white--text text-subtitle-1 text-capitalize">
-                  customer service: 63930906
+                <div class="white--text text-subtitle-1">
+                  Customer Service: 63930906
                 </div>
               </v-col>
             </v-row>
@@ -37,8 +37,8 @@
        </v-row>
         <v-row align="center" justify="center">
           <v-col cols="auto">
-            <div class="white--text text-subtitle-2 text-capitalize">
-              ©️ {{ new Date().getFullYear() }} by LASSANA limited
+            <div class="white--text text-subtitle-2">
+              ©️ {{ new Date().getFullYear() }} By LASSANA Limited
             </div>
           </v-col>
         </v-row>

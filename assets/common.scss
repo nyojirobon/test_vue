@@ -1,0 +1,23 @@
+.v-btn {
+  text-transform: none !important;
+}
+
+.v-carousel__controls__item.v-btn {
+  color: black !important;
+}
+
+.v-carousel__controls__item.v-btn.v-btn--active {
+  color: var(--v-primary-base) !important;
+}
+
+.v-carousel__controls__item.v-btn.v-btn--active:before {
+  opacity: 0 !important;
+}
+
+.v-carousel__controls__item.v-btn:hover:before {
+  opacity: 0 !important;
+}
+
+.v-carousel__controls__item.v-btn .v-icon {
+  opacity: 1 !important;
+}
