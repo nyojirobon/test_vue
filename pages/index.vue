@@ -4,7 +4,7 @@
       <v-col cols=12 md=6>
         <v-row class="mb-3">
           <v-col cols=12>
-            <div class="text-h5 font-weight-medium">
+            <div class="text-h5 font-weight-medium mx-auto">
               Lassana Delights Your Daily Coffee Experience
             </div>
           </v-col>
@@ -16,16 +16,16 @@
         </v-row>
       </v-col>
       <v-col cols=12 md=6>
-        <v-img src="/v.png" contain=true  max-height="250px"></v-img>
+        <v-img :src="`${topImage.src}`" contain max-height="250px"></v-img>
       </v-col>
     </v-row>
     <v-row class="my-3">
       <v-col cols=12>
-        <v-carousel cycle :show-arrows="false" :hide-delimiter-background="true" style="max-height: 300px;">
+        <v-carousel cycle :show-arrows="false" :hide-delimiter-background="true">
           <v-carousel-item
-            v-for="(item,i) in carouselItems"
+            v-for="(image,i) in carouselImages"
             :key="i"
-            :src="item.src"
+            :src="image.src"
           ></v-carousel-item>
         </v-carousel>
       </v-col>
@@ -41,7 +41,7 @@
         <TextImageCard v-bind="card" />
       </v-col>
     </v-row>
-    <v-row  class="mt-3">
+    <v-row class="mt-3" justify="center">
       <v-col cols=12>
         <v-row>
           <v-col cols=12>
@@ -69,29 +69,32 @@ export default {
   },
   data() {
     return {
-      carouselItems: [
+      topImage: {
+        src: 'https://www.lassana.hk/_nuxt/img/ee7e9ce.png'
+      },
+      carouselImages: [
         {
-          src: '/icon.png'
+          src: 'https://api-eshop.lassana.hk/api/attachments/60138da7d930b6001e077e67.exlarge.webp'
         },
         {
-          src: '/vuetify-logo.svg'
+          src: 'https://api-eshop.lassana.hk/api/attachments/60138da7d930b6001e077e53.large.webp'
         },
         {
-          src: 'https://jp.vuejs.org/images/logo.png'
+          src: 'https://api-eshop.lassana.hk/api/attachments/60138da7d930b6001e077e67.exlarge.webp'
         }
       ],
       textImageCards: [
         {
-          src: 'https://webnexty.com/wp-content/uploads/2015/03/ffffff.png',
+          src: 'https://www.lassana.hk/_nuxt/img/36a3ef1.png',
           text: 'Our Coffee',
           backgroundColor: 'black'
         },
         {
-          src: 'https://webnexty.com/wp-content/uploads/2015/03/ffffff.png',
+          src: 'https://www.lassana.hk/_nuxt/img/70ec6fb.png',
           text: 'Our Pastry'
         },
         {
-          src: 'https://webnexty.com/wp-content/uploads/2015/03/ffffff.png',
+          src: 'https://www.lassana.hk/_nuxt/img/aca2482.png',
           text: 'Our Food',
           backgroundColor: 'light-green darken-4'
         }

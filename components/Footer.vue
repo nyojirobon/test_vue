@@ -1,6 +1,6 @@
 <template>
     <v-footer
-      :absolute="!fixed"
+      absolute
       color="black"
       app
     >
@@ -16,7 +16,7 @@
             </v-row>
             <v-row align="center" justify="start">
               <v-col v-for="(item, i) in sns" :key="i" cols="auto">
-                <v-btn :to="`${item.to}`" icon nuxt>
+                <v-btn @click="onSnsClick(`${item.to}`)" icon>
                   <v-icon color="white" large>{{item.icon}}</v-icon>
                 </v-btn>
               </v-col>
@@ -31,7 +31,7 @@
           </v-col>
           <v-col cols=12 md=3>
             <nuxt-link :to="`${image.to}`">
-              <v-img :src="`${image.src}`" max-height="80px" contain=true></v-img>
+              <v-img :src="`${image.src}`" max-height="80px" contain></v-img>
             </nuxt-link>
           </v-col>
        </v-row>
@@ -51,19 +51,24 @@ export default {
   data () {
     return {
       image: {
-        src: '/v.png',
+        src: 'https://www.lassana.hk/_nuxt/img/0a33ac1-304.png',
         to: '/'
       },
       sns: [
         {
           icon: 'fab fa-facebook',
-          to: ''
+          to: 'https://www.facebook.com/ExpressBarLassana/'
         },
         {
           icon: 'fab fa-instagram',
-          to: ''
+          to: 'https://www.instagram.com/lassanacoffee/'
         }
       ]
+    }
+  },
+  methods: {
+    onSnsClick: function(url) {
+      window.open(url, '_blank');
     }
   }
 }

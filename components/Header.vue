@@ -2,7 +2,7 @@
   <v-app-bar
       height="100px"
       flat
-      :absolute="!fixed"
+      absolute
       color="white"
       app
   >
@@ -10,7 +10,7 @@
       <v-row align="center" justify="space-between">
         <v-col cols=12 md=3>
           <nuxt-link :to="`${image.to}`">
-            <v-img :src="`${image.src}`" max-height="80px" contain=true></v-img>
+            <v-img :src="`${image.src}`" max-height="80px" contain></v-img>
           </nuxt-link>
         </v-col>
         <v-col align="center" class="hidden-sm-and-down">
@@ -30,7 +30,7 @@ export default {
   data () {
     return {
       image: {
-        src: '/v.png',
+        src: 'https://www.lassana.hk/_nuxt/img/0a33ac1-304.png',
         to: '/'
       },
       items: [
